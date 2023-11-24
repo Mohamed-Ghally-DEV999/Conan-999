@@ -283,6 +283,10 @@ ul {
   background-color: #ececec;
   z-index: -1;
   transform: skewY(-6deg);
+  -webkit-transform: skewY(-6deg);
+  -moz-transform: skewY(-6deg);
+  -ms-transform: skewY(-6deg);
+  -o-transform: skewY(-6deg);
   transform-origin: top left;
 }
 .landing .container {
@@ -291,50 +295,53 @@ ul {
   align-items: center;
   padding-bottom: 120px;
 }
-.landing .text {
+@media (max-width: 991px) {
+  .landing .container {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}
+.landing .container .text {
   flex: 1;
 }
 @media (max-width: 991px) {
-  .landing .text {
+  .landing .container .text {
     text-align: center;
   }
 }
-.landing .text h1 {
+.landing .container .text h1 {
   font-size: 40px;
   margin: 0;
   letter-spacing: -2px;
 }
 @media (max-width: 767px) {
-  .landing .text h1 {
+  .landing .container .text h1 {
     font-size: 28px;
   }
 }
-.landing .text p {
-  font-size: 23px;
+.landing .container .text p {
+  font-size: 20px;
   line-height: 1.7;
   margin: 5px 0 0;
   color: #666;
   max-width: 500px;
 }
 @media (max-width: 991px) {
-  .landing .text p {
+  .landing .container .text p {
     margin: 10px auto;
   }
 }
 @media (max-width: 767px) {
-  .landing .text p {
+  .landing .container .text p {
     font-size: 18px;
   }
 }
 .landing .image img {
   position: relative;
   width: 600px;
+  max-width: 100%;
   animation: up-and-down 5s linear infinite;
-}
-@media (max-width: 991px) {
-  .landing .image {
-    display: none;
-  }
+  -webkit-animation: up-and-down 5s linear infinite;
 }
 .landing .go-down {
   color: var(--main-color);
@@ -342,13 +349,22 @@ ul {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
 .landing .go-down:hover {
   color: var(--main-color-alt);
 }
 .landing .go-down i {
   animation: bouncing 1.5s infinite;
+  -webkit-animation: bouncing 2.2s infinite;
 }
 /* End Landing */
 /* Start Articles */
